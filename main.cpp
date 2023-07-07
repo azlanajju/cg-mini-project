@@ -1,4 +1,4 @@
-#include<windows.h>
+// g++ main.cpp -o main -lGL -lGLU -lglut
 #include <GL/glut.h>
 #include<bits/stdc++.h>
 #include <stdlib.h>
@@ -1105,17 +1105,6 @@ static void display(void)
         drawStrokeText2("Plane Game",-2,0,0);
     }
 
-    //glColor3d(1,1,0);
-	//drawStrokeText("Osama Hosam's OpenGL Tutorials",200,200,0);
-
-//	glRasterPos2i(100, 120);
-//    glColor4f(0.0f, 0.0f, 1.0f, 1.0f);
-//    glutBitmapString(GLUT_BITMAP_HELVETICA_18, "text to render");
-
-    //drawBitmapText("Osama Hosam's OpenGL Tutorials",0,0,0);
-
-
-    //drawStrokeChar(49,2,0,0);
 
 
     glutSwapBuffers();
@@ -1161,36 +1150,36 @@ static void key(unsigned char key, int x, int y)
             rotX+=rotFrac*3;
             rotY-=rotFrac/2;
             break;
-//        case 'y':
-//            rotX-=rotFrac;
-//            break;
-//        case 'h':
-//            rotX+=rotFrac;
-//            break;
-//        case 'g':
-//            rotY+=rotFrac;
-//            break;
-//        case 'j':
-//            rotY-=rotFrac;
-//            break;
+       case 'y':
+           rotX-=rotFrac;
+           break;
+       case 'h':
+           rotX+=rotFrac;
+           break;
+    //    case 'g':
+    //        rotY+=rotFrac;
+    //        break;
+       case 'j':
+           rotY-=rotFrac;
+           break;
         case 'g':
             START=true;
             break;
         case 'm':
             START=false;
             break;
-//        case 'o':
-//            cosX-=frac*cos(rotX*rad);
-//            cosY+=frac*cos(rotY*rad);
-//            cosZ-=frac*cos(rotZ*rad);
-//            //cout<<"Front : "<<cosX<<" "<<cosY<<" "<<cosZ<<endl;
-//            break;
-//        case 'l':
-//            cosX+=frac*cos(rotX*rad);
-//            cosY-=frac*cos(rotY*rad);
-//            cosZ+=frac*cos(rotZ*rad);
-//            //cout<<"Back : "<<cosX<<" "<<cosY<<" "<<cosZ<<endl;
-//            break;
+       case 'o':
+           cosX-=frac*cos(rotX*rad);
+           cosY+=frac*cos(rotY*rad);
+           cosZ-=frac*cos(rotZ*rad);
+           cout<<"Front : "<<cosX<<" "<<cosY<<" "<<cosZ<<endl;
+           break;
+       case 'l':
+           cosX+=frac*cos(rotX*rad);
+           cosY-=frac*cos(rotY*rad);
+           cosZ+=frac*cos(rotZ*rad);
+           cout<<"Back : "<<cosX<<" "<<cosY<<" "<<cosZ<<endl;
+           break;
 
     }
 
